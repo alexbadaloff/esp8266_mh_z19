@@ -1,8 +1,7 @@
 #define pwmPin 12 // gpio12
 
 int prevVal = LOW;
-long th, tl, h, l, ppm, ppm1;
-long tt;
+long th, tl, h, l, tt;
 int myVal;
 
 void setup() {
