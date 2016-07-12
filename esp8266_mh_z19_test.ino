@@ -1,8 +1,7 @@
 #define pwmPin 12 // gpio12
 
-int prevVal = LOW;
+int prevVal = LOW, myVal;
 long th, tl, h, l, tt;
-int myVal;
 
 void setup() {
   Serial.begin(115200);
@@ -33,7 +32,7 @@ int getPPM() {
         j++;
       }
     }
-    if ((millis() - t1) > 3000) {
+    if ((millis() - t1) > 3000) { // на случай, если не получим значение в течении 3 секунд
       return -1;
     }
   }
